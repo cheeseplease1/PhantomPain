@@ -1,0 +1,27 @@
+-Install XR Plugin Manager Package
+-Install XR Interaction Toolkit (Add Package by Name: com.unity.xr.interaction.toolkit)
+-From Interaction Toolkit - Install Sample Assets and Device Simulator
+-Project Settings > XR Plugin-Management > Open XR
+-Project Settings > XR Plugin-Management> Add Interaction Profiles - Oculus, Microsoft Stuff
+
+
+-Project Settings > Preset Manager > Add Default Preset > XR Controller (Action-Based)
+-2 Filters, One named Left and the Other named right.
+-Under Preset, select XRI Default Left/Right Controller
+
+-Right Click, Under XR, add Action Based XR Origin to scene
+-Right Click, add XR Interaction Manager
+-Add Component to IM, Input Action Manager
+-Drag Default Input Actions into Action Assets on Input Action Manager Component
+
+-Under Camera Offset in XR Origin, Add a Locomotion System
+-Add Two Empty Game Objects rename them to Right Hand and Left Hand Controllers
+-give them both the XR Controller (Action-Based) script, also Under Camera Offset (You can also use ray interactors if you want to point and click stuff)
+-Give them Child Objects with XR Direct Interactor scripts and a trigger collider
+-You can visualize them with an object
+
+-To make stuff grababble, they need the XR Grab Interactable script
+-In the script under Interaction Layer Mask, make a new layer, name it 'Grababble', and uncheck all other layers
+-Apply this layer as well on the Direct Interactor Layer masks as well
+-The direct Interactors have a ton of events and whatnot you can mess around with
+-Hover is when you are in range of an object, Select is when you grab it, Activate is exclusive to Grab Interactables and is an event that occurs when you press a button while holding it
